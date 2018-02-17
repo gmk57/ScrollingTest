@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+//    compileSdkVersion 25
+//    compileSdkVersion 26
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "gmk57.scrollingtest"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+//    implementation 'com.android.support:appcompat-v7:25.4.0'  // Smooth scrolling works
+//    implementation 'com.android.support:appcompat-v7:26.0.0'  // Smooth scrolling does not work
+    implementation 'com.android.support:appcompat-v7:27.0.2'  // Smooth scrolling does not work
+}
